@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Slider>
+@foreach (var item in Model)
+{
+    <div class="aa-top-slider-single">
+        <img src="@Url.Content(item.SliderImg)" alt="img">
+        <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">@item.SliderTitle</span>
+            <h2 class="aa-top-slider-title">@item.SubTitle</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>@item.Location</p>
+            <span class="aa-top-slider-off">@item.DiscountPer % OFF</span>
+            <p class="aa-top-slider-price">$ @item.Cost</p>
+            <a asp-action="SliderDetails" asp-controller="Home" class="aa-top-slider-btn" asp-route-id="@item.SliderId">Read More <span class="fa fa-angle-double-right"></span></a>
+        </div>
+    </div>
+
+}

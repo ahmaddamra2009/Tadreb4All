@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Tadreb4All.Models.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogTitle)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.BlogImg)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.IsPublished)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogImg)
+            </td>
+          
+            <td>
+                @if (item.IsPublished == true)
+                {
+                    <text>
+                        <span class="badge badge-success">Published</span>
+
+                    </text>
+                }
+                else
+                {
+                    <text>   <span class="badge badge-success" style="color:yellow;background-color:indianred" >Not-Published </span></text>
+                }
+
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BlogId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BlogId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BlogId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

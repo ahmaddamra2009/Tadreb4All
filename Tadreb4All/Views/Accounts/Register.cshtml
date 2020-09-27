@@ -1,0 +1,121 @@
+﻿@model User
+
+@{
+
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Register User</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon">
+
+
+    <!-- Font awesome -->
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="~/css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="~/css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="~/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="switcher" href="~/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main style sheet -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <section id="aa-signin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="aa-signin-area">
+                        <div class="aa-signin-form">
+                            <div class="aa-signin-form-title">
+                                <a class="aa-property-home" href="index.html">User Register</a>
+                                <h4>Create user account and Stay with us</h4>
+                            </div>
+                            <form asp-action="Register" asp-controller="Accounts" method="post" enctype="multipart/form-data">
+                                <div class="aa-single-field">
+                                    <label for="name">User Name <span class="required">*</span></label>
+                                    <input asp-for="UserName" required="required" aria-required="true" value="" placeholder="Enter user Name">
+                                </div>
+                                <div class="aa-single-field">
+                                    <label for="password">Password <span class="required">*</span></label>
+                                    <input asp-for="Password" required="required" aria-required="true" value="" placeholder="Enter user Password">
+                                </div>
+                                <div class="aa-single-field">
+                                    <label for="fullName">Full Name <span class="required">*</span></label>
+                                    <input asp-for="FullName" required="required" aria-required="true" value="" placeholder="Enter Full Name">
+                                </div>
+                                <div class="aa-single-field">
+                                    <label for="RegisterDte">Register Date<span class="required">*</span></label>
+                                    <input asp-for="RegDate" type="date" required="required" aria-required="true" value="" placeholder="select Date">
+                                </div>
+                                <div class="aa-single-field">
+                                    <label for="Image">Upload Image<span class="required">*</span></label>
+                                    <input name="UserImg" class="input-group" type="file" required="required" aria-required="true" value="" placeholder="Select Img">
+                                </div>
+
+                                <div class="aa-single-field">
+                                    <label for="Mobile">Mobile <span class="required">*</span></label>
+                                    <input asp-for="Mobile" required="required" aria-required="true" value="" placeholder="Enter Mobile Number">
+                                </div>
+
+                                <div class="aa-single-field">
+                                    <label for="Address">Address <span class="required">*</span></label>
+                                    <input asp-for="Address" required="required" aria-required="true" value="" placeholder="Enter Address">
+                                </div>
+                                <div class="aa-single-field">
+                                    <label for="Email">Email <span class="required">*</span></label>
+                                    <input asp-for="Email" required="required" aria-required="true" value="" placeholder="Enter Email">
+                                </div>
+
+                                <div class="aa-single-field">
+                                    <label for="role">role <span class="required">*</span></label>
+                                  <select asp-for="RoleId" class="form-control"  asp-items="ViewBag.RoleId"></select>
+                                </div>
+                                <div class="aa-single-submit">
+                                    <input class="input-group" type="submit" value="Create Account" name="submit">
+                                </div>
+                            
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <script src="~/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/js/bootstrap.js"></script>
+    <!-- slick slider -->
+    <script type="text/javascript" src="~/js/slick.js"></script>
+    <!-- Price picker slider -->
+    <script type="text/javascript" src="~/js/nouislider.js"></script>
+    <!-- mixit slider -->
+    <script type="text/javascript" src="~/js/jquery.mixitup.js"></script>
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="~/js/jquery.fancybox.pack.js"></script>
+    <!-- Custom js -->
+    <script src="~/js/custom.js"></script>
+
+</body>
+</html>

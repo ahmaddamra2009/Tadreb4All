@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Tadreb4All.Models.Slider>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SliderTitle)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.SliderImg)
+            </th>
+          
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SliderTitle)
+            </td>
+          
+            <td>
+            
+                <img src="@Url.Content(item.SliderImg)" width="80" height="80" />
+            </td>
+           
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SliderId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SliderId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SliderId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

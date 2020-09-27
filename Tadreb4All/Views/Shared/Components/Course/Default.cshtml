@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Course>
+
+<div class="aa-latest-property-area">
+    <div class="aa-title">
+        <h2>Latest Courses</h2>
+        <span></span>
+        <p>You Can Select any course to display more details . for more info please contact us</p>
+    </div>
+    <div class="aa-latest-properties-content">
+        <div class="row">
+            @foreach (var co in Model)
+            {
+                <div class="col-md-4">
+                    <article class="aa-properties-item">
+                        <a href="#" class="aa-properties-item-img">
+                            <img src="@Url.Content(co.CourseImg)" alt="img">
+                        </a>
+                        <div class="aa-tag for-sale">
+                            @co.Venu
+                        </div>
+                        <div class="aa-properties-item-content">
+                            <div class="aa-properties-info">
+                                <span>Start Date</span>
+                                <span>@co.SDate.ToShortDateString()</span>
+                                <span>Start Time</span>
+                                <span>@co.STime.ToShortTimeString()</span>
+                            </div>
+                            <div class="aa-properties-about">
+                                <h3><a href="#">@co.CourseName</a></h3>
+                                <p>@co.CourseDesc.Substring(1, 20) ...</p>
+                            </div>
+                            <div class="aa-properties-detial">
+                                <span class="aa-price">
+                                    $ @co.Price
+                                </span>
+                                <a asp-action="CourseDetails" asp-controller="Home" asp-route-id="@co.CourseId" class="aa-secondary-btn">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

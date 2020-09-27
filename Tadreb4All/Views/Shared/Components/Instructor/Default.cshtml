@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Instructor>
+<section id="aa-agents">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aa-agents-area">
+                    <div class="aa-title">
+                        <h2>Our Instructors</h2>
+                        <span></span>
+                        <p>You can find any trainer here</p>
+                    </div>
+                    <!-- agents content -->
+                    <div class="aa-agents-content">
+                        <ul class="aa-agents-slider">
+                         @foreach (var ins in Model)
+                         {
+                            <li>
+                                <div class="aa-single-agents">
+                                    <div class="aa-agents-img">
+                                        <img src="@Url.Content(ins.InsImg)" width="100px" height="182px" alt="agent member image">
+                                    </div>
+                                    <div class="aa-agetns-info">
+                                        <h4><a asp-action="InstructorDetails" asp-controller="Home" asp-route-id="@ins.InstructorId">
+                                            
+                                            @ins.InstructorName
+                                            
+                                            </a></h4>
+                                        <span>@ins.Position</span>
+                                        <div class="aa-agent-social">
+                                            <a href="@ins.FbUrl"><i class="fa fa-facebook"></i></a>
+                                            <a href="@ins.TwUrl"><i class="fa fa-twitter"></i></a>
+                                            <a href="@ins.LinkedUrl"><i class="fa fa-linkedin"></i></a>
+                                            <a href="@ins.Email"><i class="fa fa-inbox"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                         }
+                            
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

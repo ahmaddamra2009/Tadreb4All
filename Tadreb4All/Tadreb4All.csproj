@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\.sass-cache\24fa3457fef2c7a8dd499a16da444ff5da93fd79\_footer.scssc" />
+    <None Include="wwwroot\.sass-cache\24fa3457fef2c7a8dd499a16da444ff5da93fd79\_header.scssc" />
+    <None Include="wwwroot\.sass-cache\24fa3457fef2c7a8dd499a16da444ff5da93fd79\_nav.scssc" />
+    <None Include="wwwroot\.sass-cache\92e65d89f02a31c41a04d8a86d76125d70b1e445\_buttons.scssc" />
+    <None Include="wwwroot\.sass-cache\92e65d89f02a31c41a04d8a86d76125d70b1e445\_responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\92e65d89f02a31c41a04d8a86d76125d70b1e445\_sections.scssc" />
+    <None Include="wwwroot\.sass-cache\92e65d89f02a31c41a04d8a86d76125d70b1e445\_theme-color.scssc" />
+    <None Include="wwwroot\.sass-cache\92e65d89f02a31c41a04d8a86d76125d70b1e445\_typography.scssc" />
+    <None Include="wwwroot\.sass-cache\b17cfc8f2f692ca944bdfcaed15220cf78b09c99\style.scssc" />
+    <None Include="wwwroot\.sass-cache\d69ec8be0a74b90aa26ec05a08d2f01daa24c3bd\_base.scssc" />
+    <None Include="wwwroot\.sass-cache\d69ec8be0a74b90aa26ec05a08d2f01daa24c3bd\_mixins.scssc" />
+    <None Include="wwwroot\.sass-cache\d69ec8be0a74b90aa26ec05a08d2f01daa24c3bd\_variables.scssc" />
+    <None Include="wwwroot\Dashboard\vendors\bootstrap-wysihtml5\.settings\.gitignore" />
+    <None Include="wwwroot\js\site.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Administrator\Data\" />
+    <Folder Include="Areas\Administrator\Models\" />
+    <Folder Include="wwwroot\Instructor\ImgProfile\" />
+    <Folder Include="wwwroot\Sliders\img\" />
+    <Folder Include="wwwroot\Users\img\" />
+  </ItemGroup>
+
+</Project>
